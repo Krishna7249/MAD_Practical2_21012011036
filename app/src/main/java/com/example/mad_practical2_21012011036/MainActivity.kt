@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.krishnajoshi.mad_practical2_21012011036.R
 
 class MainActivity : AppCompatActivity() {
     val TAG="MainActivity"
@@ -35,7 +36,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        showMessage("onDestroy ")
+        showMessage("onDestroy method is called")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        showMessage("onRestart method is called")
     }
     fun showMessage(message:String){
         Log.i(TAG, message)
